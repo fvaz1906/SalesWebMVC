@@ -3,47 +3,22 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>@ViewData["Title"]</h2>
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">@ViewData["Title"]</h1>
+    <a asp-action="Index" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+        <i class="fas fa-download fa-sm text-white-50"></i> Back to List
+    </a>
+</div>
 
-
-<div>
-    <h4>Seller</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.BirthDate)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.BirthDate)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.BaseSalary)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.BaseSalary)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Department)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Department.Name)
-        </dd>
-    </dl>
-
-    <div>
-        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
-        <a asp-action="Index">Back to list</a>
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        Detalhes <span class="badge badge-light"><a asp-action="Edit" asp-route-id="@Model.Id">Edit</a></span>
     </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">@Html.DisplayFor(model => model.Name)</li>
+        <li class="list-group-item">@Html.DisplayFor(model => model.Email)</li>
+        <li class="list-group-item">@Html.DisplayFor(model => model.BirthDate)</li>
+        <li class="list-group-item">@Html.DisplayFor(model => model.BaseSalary)</li>
+        <li class="list-group-item">@Html.DisplayFor(model => model.Department.Name)</li>
+    </ul>
 </div>

@@ -39,5 +39,10 @@ namespace SalesWebMVC.Services
             _context.Seller.Remove(obj);
             _context.SaveChanges();
         }
+
+        public void Update(Seller obj)
+        {
+
+        }
     }
 }
