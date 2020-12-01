@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Sales Records";
+}
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">@ViewData["Title"]</h1>
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Busca Simples</h6>
+    </div>
+    <div class="card-body">
+        <form asp-action="SimpleSearch">
+            <div class="form-group">
+                <label>Data Mínima</label>
+                <input type="date" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Data Máxima</label>
+                <input type="date" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-danger">Buscar</button>
+        </form>
+    </div>
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Busca Agrupada</h6>
+    </div>
+    <div class="card-body">
+        <form asp-action="GroupingSearch">
+            <div class="form-group">
+                <label>Data Mínima</label>
+                <input type="date" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Data Máxima</label>
+                <input type="date" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-danger">Buscar</button>
+        </form>
+    </div>
+</div>
+
